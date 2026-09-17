@@ -603,8 +603,8 @@ document.addEventListener('DOMContentLoaded', () => {
   replayBtn.addEventListener('click', resetDoorState);
 
   // --- Door Modal Controls ---
-  doorSelectBtn.addEventListener('click', () => doorModal.classList.remove('hidden'));
-  closeDoorModal.addEventListener('click', () => doorModal.classList.add('hidden'));
+  if (doorSelectBtn) doorSelectBtn.addEventListener('click', () => doorModal && doorModal.classList.remove('hidden'));
+  if (closeDoorModal) closeDoorModal.addEventListener('click', () => doorModal && doorModal.classList.add('hidden'));
   
   document.querySelectorAll('.door-option-card').forEach(card => {
     card.addEventListener('click', () => {
@@ -613,10 +613,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --- Details Editor Controls ---
-  editDetailsBtn.addEventListener('click', () => editorModal.classList.remove('hidden'));
-  closeEditorModal.addEventListener('click', () => editorModal.classList.add('hidden'));
+  if (editDetailsBtn) editDetailsBtn.addEventListener('click', () => editorModal && editorModal.classList.remove('hidden'));
+  if (closeEditorModal) closeEditorModal.addEventListener('click', () => editorModal && editorModal.classList.add('hidden'));
 
-  editorForm.addEventListener('submit', (e) => {
+  if (editorForm) editorForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     // Check if custom door video was entered
