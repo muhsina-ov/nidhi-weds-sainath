@@ -39,6 +39,7 @@
   <link rel="preload" href="./assets/doors/palace_poster.webp" as="image" type="image/webp" fetchpriority="high">
   <link rel="preload" href="./assets/doors/custom.mp4" as="video" type="video/mp4">
   <link rel="preload" href="./assets/ganesha.png" as="image" type="image/png">
+  <link rel="preload" href="./assets/shree_ganeshay_namah.png" as="image" type="image/png">
 
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -87,6 +88,9 @@
 
         <!-- Tap-To-Open Callout (Disappears immediately on click/tap) -->
         <div class="tap-to-open-overlay" id="tapOverlay">
+          <div class="cover-ganesha-badge">
+            <img src="./assets/ganesha.png" alt="Lord Ganesha" class="cover-ganesha-img" width="60" height="75">
+          </div>
           <div class="keyhole-pulse">
             <div class="ring-pulse"></div>
             <div class="keyhole-icon">
@@ -114,7 +118,7 @@
           <!-- Hindi Invocation Calligraphy (Shree Ganeshay Namah) -->
           <div class="invitation-header animate-element" style="--delay: 0.12s;">
             <div class="hindi-calligraphy-display" id="displayBismillah">
-              <span class="hindi-shree">॥ श्री</span> <span class="hindi-ganeshay">गणेशाय</span> <span class="hindi-namah">नमः ॥</span>
+              <img src="./assets/shree_ganeshay_namah.png" alt="श्री गणेशाय नमः" class="hindi-calligraphy-img" width="280" height="110">
             </div>
             <div class="header-divider">
               <span class="line"></span>

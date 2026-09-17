@@ -117,6 +117,12 @@ document.addEventListener('DOMContentLoaded', () => {
     void invitationOverlay.offsetWidth;
     invitationOverlay.classList.add('revealed');
 
+    // Reveal floating sky lanterns DELAYED: after the content/text appears
+    setTimeout(() => {
+      const lanternsContainer = document.getElementById('lanternsContainer');
+      if (lanternsContainer) lanternsContainer.classList.add('revealed');
+    }, 1200);
+
     // Initialize HTML5 Scratch Canvas once overlay is visible
     setTimeout(() => {
       initScratchCanvas();
@@ -431,12 +437,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Video Event Listeners (Dynamic for any video duration) ---
   video.addEventListener('timeupdate', () => {
     const duration = (isFinite(video.duration) && video.duration > 0) ? video.duration : 6.0;
-    
-    // Reveal floating sky lanterns at ~70% of video playback
-    if (video.currentTime >= duration * 0.7) {
-      const lanternsContainer = document.getElementById('lanternsContainer');
-      if (lanternsContainer) lanternsContainer.classList.add('revealed');
-    }
 
     // Trigger fade-in reveal at end of video playback (0.6s before finish or upon end)
     const revealTime = Math.max(1.0, duration - 0.6);
