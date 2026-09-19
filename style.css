@@ -67,7 +67,7 @@ html, body {
   right: 0;
   z-index: 100;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding: 0 24px;
   max-width: 900px;
@@ -558,16 +558,16 @@ html, body {
 
 /* --- Top Lord Ganesha Sacred Icon --- */
 .ganesha-header-block {
-  margin-bottom: 8px;
+  margin-bottom: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .ganesha-icon-img {
-  width: 82px;
+  width: 66px;
   height: auto;
-  max-height: 104px;
+  max-height: 84px;
   object-fit: contain;
   filter: drop-shadow(0 0 16px rgba(255, 170, 40, 0.55));
   animation: subtleFloatGanesha 4s ease-in-out infinite alternate;
@@ -579,19 +579,26 @@ html, body {
 }
 
 /* --- Hindi Invocation Calligraphy (Shree Ganeshay Namah) --- */
+.invitation-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .hindi-calligraphy-display {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 4px auto 2px;
+  margin: 0 auto 2px;
   width: 100%;
   max-width: 320px;
 }
 
 .hindi-calligraphy-img {
-  width: min(265px, 78vw);
+  width: min(250px, 75vw);
   height: auto;
-  max-height: 88px;
+  max-height: 84px;
   object-fit: contain;
   filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 15px rgba(229, 193, 88, 0.4));
   transition: transform 0.3s ease;
@@ -610,8 +617,9 @@ html, body {
 .header-divider {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
-  margin: 10px 0 14px;
+  margin: 8px auto 14px;
   width: 140px;
 }
 
@@ -631,7 +639,7 @@ html, body {
   width: 100%;
   max-width: 340px;
   margin: 2px 0 12px;
-  padding: 10px 14px;
+  padding: 12px 16px;
   background: rgba(22, 18, 14, 0.55);
   border: 1px solid rgba(229, 193, 88, 0.22);
   border-radius: 14px;
@@ -641,10 +649,10 @@ html, body {
 
 .blessing-prefix {
   font-family: var(--font-serif);
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   letter-spacing: 3px;
   color: var(--color-gold);
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   text-transform: uppercase;
   font-weight: 600;
   opacity: 0.95;
@@ -653,15 +661,15 @@ html, body {
 .blessings-names-box {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 4px;
 }
 
 .blessing-names {
   font-family: var(--font-body);
-  font-size: 0.88rem;
+  font-size: 0.98rem;
   color: var(--color-text-bright);
   letter-spacing: 0.5px;
-  line-height: 1.35;
+  line-height: 1.38;
 }
 
 .blessing-sub-diamond {
@@ -675,25 +683,28 @@ html, body {
   color: var(--color-gold);
   font-style: italic;
   font-family: var(--font-heading);
+  font-size: 0.82em;
+  margin: 0 0.35em;
+  display: inline-block;
 }
 
 .gold-separator-subtle {
   width: 50px;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
-  margin: 4px auto 14px;
+  margin: 6px auto 14px;
   opacity: 0.5;
 }
 
 .greeting-text {
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   letter-spacing: 1px;
   color: var(--color-gold-light);
   font-weight: 400;
   font-style: italic;
-  line-height: 1.5;
-  max-width: 320px;
+  line-height: 1.55;
+  max-width: 340px;
   margin-bottom: 16px;
 }
 
@@ -712,7 +723,7 @@ html, body {
 
 .groom-name, .bride-name {
   font-family: var(--font-heading);
-  font-size: 2.35rem;
+  font-size: 2.75rem;
   font-weight: 400;
   line-height: 1.1;
   background: var(--color-gold-gradient);
@@ -724,11 +735,11 @@ html, body {
 
 .parent-line {
   font-family: var(--font-sans);
-  font-size: 0.68rem;
+  font-size: 0.74rem;
   letter-spacing: 0.8px;
   color: var(--color-gold-light);
   opacity: 0.85;
-  margin-top: 1px;
+  margin-top: 2px;
 }
 
 .ampersand-wrapper {
@@ -893,15 +904,16 @@ html, body {
   font-weight: 700;
 }
 
-.date-numeric-reveal {
-  font-family: var(--font-heading);
-  font-size: 1.18rem;
+.date-save-the-date {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
   letter-spacing: 4px;
   color: var(--color-gold);
   font-weight: 700;
   margin-top: 8px;
-  padding-top: 6px;
+  padding-top: 8px;
   border-top: 1px dashed rgba(229, 193, 88, 0.35);
+  text-transform: uppercase;
   text-shadow: 0 0 12px rgba(229, 193, 88, 0.3);
 }
 
@@ -972,37 +984,32 @@ html, body {
 
 .section-title {
   font-family: var(--font-serif);
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   letter-spacing: 3px;
   color: var(--color-gold);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .venue-card-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-}
-
-.venue-arch-icon {
-  color: var(--color-gold);
-  margin-bottom: 4px;
-  filter: drop-shadow(0 0 8px rgba(229, 193, 88, 0.45));
+  gap: 6px;
 }
 
 .venue-hall-name {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 1.55rem;
   color: var(--color-gold-light);
   letter-spacing: 1.5px;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .venue-club-name {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: var(--color-gold);
   letter-spacing: 1px;
   font-weight: 600;
@@ -1010,33 +1017,29 @@ html, body {
 
 .venue-address-full {
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--color-text-muted);
-  line-height: 1.4;
-  max-width: 290px;
-  margin: 6px 0 14px;
+  line-height: 1.45;
+  max-width: 300px;
+  margin: 4px 0 2px;
 }
 
-.venue-directions-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--color-gold-gradient);
-  color: #0A0A0C;
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  padding: 10px 18px;
-  border-radius: 25px;
-  text-decoration: none;
-  box-shadow: 0 4px 15px rgba(229, 193, 88, 0.3);
-  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+/* --- Quote Section (Between Venue and RSVP) --- */
+.quote-section {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 20px;
+  padding: 0 10px;
 }
 
-.venue-directions-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(229, 193, 88, 0.5);
+.story-quote {
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--color-gold-light);
+  margin-bottom: 0;
+  opacity: 0.95;
 }
 
 /* --- RSVP Section --- */
@@ -1047,7 +1050,7 @@ html, body {
   backdrop-filter: blur(14px);
   border: 1px solid var(--color-glass-border);
   border-radius: 18px;
-  padding: 18px;
+  padding: 20px 18px;
   margin-bottom: 20px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
@@ -1061,7 +1064,7 @@ html, body {
 
 .rsvp-prompt {
   font-family: var(--font-body);
-  font-size: 0.92rem;
+  font-size: 1.05rem;
   font-style: italic;
   color: var(--color-gold-light);
 }
@@ -1070,20 +1073,20 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 3px;
 }
 
 .rsvp-phone-label {
   font-family: var(--font-sans);
-  font-size: 0.65rem;
-  letter-spacing: 1px;
+  font-size: 0.74rem;
+  letter-spacing: 1.2px;
   color: var(--color-text-muted);
   text-transform: uppercase;
 }
 
 .rsvp-phone-number {
   font-family: var(--font-heading);
-  font-size: 1.2rem;
+  font-size: 1.38rem;
   letter-spacing: 2px;
   color: var(--color-gold-light);
   text-decoration: none;
@@ -1111,10 +1114,10 @@ html, body {
   background: #25D366;
   color: #FFFFFF;
   font-family: var(--font-sans);
-  font-size: 0.74rem;
+  font-size: 0.84rem;
   font-weight: 600;
   letter-spacing: 0.5px;
-  padding: 10px 14px;
+  padding: 11px 16px;
   border-radius: 20px;
   text-decoration: none;
   box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
@@ -1135,10 +1138,10 @@ html, body {
   border: 1px solid var(--color-gold);
   color: var(--color-gold-light);
   font-family: var(--font-sans);
-  font-size: 0.74rem;
+  font-size: 0.84rem;
   font-weight: 600;
   letter-spacing: 0.5px;
-  padding: 10px 16px;
+  padding: 11px 18px;
   border-radius: 20px;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -1177,30 +1180,6 @@ html, body {
   color: var(--color-gold-light);
 }
 
-/* --- Quote Section --- */
-.quote-section {
-  width: 100%;
-  max-width: 320px;
-  margin-bottom: 20px;
-  padding: 0 10px;
-}
-
-.story-quote {
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-style: italic;
-  line-height: 1.5;
-  color: var(--color-gold-light);
-  margin-bottom: 6px;
-  opacity: 0.95;
-}
-
-.story-ref {
-  font-family: var(--font-sans);
-  font-size: 0.65rem;
-  letter-spacing: 1.5px;
-  color: var(--color-text-muted);
-}
 .venue-block {
   margin-bottom: 20px;
 }
