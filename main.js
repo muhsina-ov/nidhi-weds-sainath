@@ -399,10 +399,9 @@ document.addEventListener('DOMContentLoaded', () => {
     isPlaying = true;
     initAudioContext();
 
-    // Trigger YouTube background music (Default user track: https://youtu.be/e1FFMfdh57w?si=Czb-xkfKOu-amjOf)
-    const ytUrlInput = document.getElementById('inputYoutubeUrl');
-    const songUrl = (ytUrlInput && ytUrlInput.value) ? ytUrlInput.value : 'https://youtu.be/e1FFMfdh57w?si=Czb-xkfKOu-amjOf';
-    playYouTubeBackgroundMusic(songUrl, true);
+    // Trigger YouTube background music (pre-warmed player unmutes instantly;
+    // falls back to creating the player on first tap for slow networks)
+    playYouTubeBackgroundMusic(getDefaultSongUrl(), true, false);
 
     // 1. Hide tap callout overlay
     tapOverlay.classList.add('fade-out');
@@ -639,6 +638,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('displayMonth')) document.getElementById('displayMonth').innerText = document.getElementById('inputMonth').value;
     if (document.getElementById('displayYear')) document.getElementById('displayYear').innerText = document.getElementById('inputYear').value;
     if (document.getElementById('displayDay')) document.getElementById('displayDay').innerText = document.getElementById('inputDay').value;
+    const saveTheDateInput = document.getElementById('inputSaveTheDate');
+    if (saveTheDateInput && document.querySelector('.date-save-the-date')) {
+      document.querySelector('.date-save-the-date').innerText = saveTheDateInput.value;
+    }
     if (document.getElementById('displayVenue')) document.getElementById('displayVenue').innerText = document.getElementById('inputVenue').value;
     if (document.getElementById('displayLocation')) document.getElementById('displayLocation').innerText = document.getElementById('inputLocation').value;
 
@@ -655,9 +658,17 @@ document.addEventListener('DOMContentLoaded', () => {
     editorModal.classList.add('hidden');
   });
 
-  // --- YouTube Background Music Player Engine ---
+  // --- YouTube Background Music Player Engine (pre-warmed to remove tap delay) ---
   let currentYoutubeVideoId = '';
   let ytPlayerIframe = null;
+  let ytWarmedUpId = '';
+
+  function getDefaultSongUrl() {
+    const ytUrlInput = document.getElementById('inputYoutubeUrl');
+    return (ytUrlInput && ytUrlInput.value && ytUrlInput.value.trim())
+      ? ytUrlInput.value.trim()
+      : 'https://youtu.be/e1FFMfdh57w?si=Czb-xkfKOu-amjOf';
+  }
 
   function extractYouTubeId(url) {
     if (!url) return '';
@@ -671,29 +682,12 @@ document.addEventListener('DOMContentLoaded', () => {
     return '';
   }
 
-  function playYouTubeBackgroundMusic(url, autoPlay = true) {
-    const videoId = extractYouTubeId(url);
-    if (!videoId) return;
-    currentYoutubeVideoId = videoId;
-    const container = document.getElementById('youtubePlayerContainer');
-    if (!container) return;
-
-    const mute = isAudioMuted ? 1 : 0;
-    const playParam = autoPlay ? 1 : 0;
-    container.innerHTML = `<iframe id="ytIframe" width="200" height="200" 
-      src="https://www.youtube.com/embed/${videoId}?enablejsapi=1&autoplay=${playParam}&loop=1&playlist=${videoId}&controls=0&mute=${mute}" 
-      frameborder="0" allow="autoplay"></iframe>`;
-
-    ytPlayerIframe = document.getElementById('ytIframe');
-  }
-
-  function toggleYouTubeAudioMute(isMuted) {
+  function sendYouTubeCommand(func) {
     if (!ytPlayerIframe || !ytPlayerIframe.contentWindow) return;
-    const command = isMuted ? 'mute' : 'unMute';
     try {
       ytPlayerIframe.contentWindow.postMessage(JSON.stringify({
         event: 'command',
-        func: command,
+        func,
         args: []
       }), '*');
     } catch (e) {
@@ -701,12 +695,62 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  function playYouTubeBackgroundMusic(url, autoPlay = true, forceMute = false) {
+    const videoId = extractYouTubeId(url);
+    if (!videoId) return;
+
+    // Reuse already-loaded iframe when the song is unchanged: avoids
+    // recreating the player on tap, which caused the audible delay.
+    if (videoId === currentYoutubeVideoId && ytPlayerIframe) {
+      if (autoPlay) sendYouTubeCommand('playVideo');
+      if (forceMute || isAudioMuted) {
+        sendYouTubeCommand('mute');
+      } else {
+        sendYouTubeCommand('unMute');
+      }
+      return;
+    }
+
+    currentYoutubeVideoId = videoId;
+    const container = document.getElementById('youtubePlayerContainer');
+    if (!container) return;
+
+    const mute = (forceMute || isAudioMuted) ? 1 : 0;
+    const playParam = autoPlay ? 1 : 0;
+    container.innerHTML = `<iframe id="ytIframe" width="200" height="200"
+      src="https://www.youtube.com/embed/${videoId}?enablejsapi=1&autoplay=${playParam}&loop=1&playlist=${videoId}&controls=0&mute=${mute}&rel=0&playsinline=1"
+      frameborder="0" allow="autoplay; encrypted-media"></iframe>`;
+
+    ytPlayerIframe = document.getElementById('ytIframe');
+    if (videoId === ytWarmedUpId) {
+      // Warmed-up player replaced (e.g. URL changed) — nothing extra needed.
+    }
+  }
+
+  // Pre-warm the YouTube player during idle time so tapping the door
+  // unmutes an already-buffering player instead of creating one from scratch.
+  function warmUpYouTubePlayer() {
+    if (ytWarmedUpId) return;
+    const songUrl = getDefaultSongUrl();
+    const videoId = extractYouTubeId(songUrl);
+    if (!videoId) return;
+    ytWarmedUpId = videoId;
+    // Muted autoplay is allowed by browsers; the tap handler unmutes it.
+    playYouTubeBackgroundMusic(songUrl, true, true);
+  }
+
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(warmUpYouTubePlayer, { timeout: 2500 });
+  } else {
+    setTimeout(warmUpYouTubePlayer, 1500);
+  }
+
   // --- Audio Mute Toggle ---
   audioToggleBtn.addEventListener('click', () => {
     isAudioMuted = !isAudioMuted;
     video.muted = isAudioMuted;
-    
-    toggleYouTubeAudioMute(isAudioMuted);
+
+    sendYouTubeCommand(isAudioMuted ? 'mute' : 'unMute');
 
     if (isAudioMuted) {
       audioIconOn.classList.add('hidden');
