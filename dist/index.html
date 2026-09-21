@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Nidhi & Sainath — Royal Wedding Invitation | 27.01.2027</title>
+  
+  <!-- Primary SEO Meta Tags -->
+  <meta name="title" content="Nidhi & Sainath — Royal Wedding Invitation | 27.01.2027">
+  <meta name="description" content="Celebrate the wedding of Nidhi & Sainath on Wednesday, 27th January 2027 at Regal Banquet Hall, Goregaon Sports Club, Mumbai.">
+  <meta name="keywords" content="Nidhi weds Sainath, Nidhi Sainath wedding invitation, digital wedding invite, Regal Banquet Hall, Goregaon Sports Club Mumbai">
+  <meta name="author" content="InviteStory">
+  <meta name="theme-color" content="#0a0a0f">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nidhi-weds-sainath.invitingyou.top/">
+  <meta property="og:title" content="Nidhi & Sainath — Royal Wedding Invitation | 27.01.2027">
+  <meta property="og:description" content="Join us to celebrate the wedding of Nidhi & Sainath on 27.01.2027 at Regal Banquet Hall, Mumbai.">
+  <meta property="og:image" content="https://nidhi-weds-sainath.invitingyou.top/og-image.jpg">
+  <meta property="og:image:secure_url" content="https://nidhi-weds-sainath.invitingyou.top/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Nidhi & Sainath Wedding Invitation — 27th January 2027">
+  <meta property="og:site_name" content="Nidhi & Sainath Wedding">
+
+  <link rel="canonical" href="https://nidhi-weds-sainath.invitingyou.top/">
+  <link rel="image_src" href="https://nidhi-weds-sainath.invitingyou.top/og-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://nidhi-weds-sainath.invitingyou.top/">
+  <meta name="twitter:title" content="Nidhi & Sainath — Royal Wedding Invitation | 27.01.2027">
+  <meta name="twitter:description" content="Join us to celebrate the wedding of Nidhi & Sainath on 27.01.2027 at Regal Banquet Hall, Mumbai.">
+  <meta name="twitter:image" content="https://nidhi-weds-sainath.invitingyou.top/og-image.jpg">
+  <meta name="twitter:image:src" content="https://nidhi-weds-sainath.invitingyou.top/og-image.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Rozha+One&family=Yatra+One&display=swap" rel="stylesheet">
+  
+  <!-- Critical Asset Preloading for Instant Render -->
+  <link rel="preload" href="./assets/doors/palace_poster.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" href="./assets/doors/custom.mp4" as="video" type="video/mp4">
+  <link rel="preload" href="./assets/lord_ganesha_gold.png" as="image" type="image/png">
+  <link rel="preload" href="./assets/shree_ganeshay_namah_gold.png" as="image" type="image/png">
+
+  <script type="module" crossorigin src="/assets/index-D2JS2vXY.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DuYVEWfC.css">
+</head>
+<body>
+  <!-- Ambient Desktop Background -->
+  <div class="ambient-backdrop" id="ambientBackdrop"></div>
+
+  <!-- Background YouTube Music Player Container -->
+  <div id="youtubePlayerContainer" class="youtube-player-container"></div>
+
+  <!-- Top Floating Controls -->
+  <header class="top-controls">
+    <div class="action-pills">
+      <button id="audioToggleBtn" class="glass-pill-btn icon-only" title="Toggle Sound">
+        <svg id="audioIconOn" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+        <svg id="audioIconOff" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main 9:16 Vertical Invitation Container -->
+  <main class="invitation-wrapper">
+    <div class="invitation-card-container" id="invitationContainer">
+      
+      <!-- Video & Image Layers (Pure Architecture, NO text overlaid on video) -->
+      <div class="media-stage" id="mediaStage">
+        <!-- High-res Static Poster Image for instant load -->
+        <img id="doorPoster" src="./assets/doors/palace_poster.webp" alt="Royal Palace Door Cover" class="door-media poster-image active" fetchpriority="high" decoding="async">
+        
+        <!-- Video Layer for physical opening animation -->
+        <video id="doorVideo" class="door-media video-player" playsinline webkit-playsinline preload="auto" muted>
+          <source id="videoSource" src="./assets/doors/custom.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Freeze Frame Canvas for 100% static hold at video completion -->
+        <canvas id="staticFrameCanvas" class="door-media static-canvas"></canvas>
+
+        <!-- Ambient Dust / Light Particle Overlay -->
+        <div class="light-dust-particles" id="dustParticles"></div>
+
+        <!-- 3D Depth Floating Sky Lanterns Overlay -->
+        <div class="floating-lanterns-container" id="lanternsContainer"></div>
+
+        <!-- Tap-To-Open Callout (Disappears immediately on click/tap) -->
+        <div class="tap-to-open-overlay" id="tapOverlay">
+          <div class="keyhole-pulse">
+            <div class="ring-pulse"></div>
+            <div class="keyhole-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="10" r="3"/><path d="M12 13v5M9.5 21h5"/></svg>
+            </div>
+          </div>
+          <span class="tap-text">TAP TO OPEN</span>
+          <span class="sub-tap-text">An Invitation Awaits</span>
+        </div>
+      </div>
+
+      <!-- Wedding Content Overlay (Reveals AFTER door opens and freezes) -->
+      <div class="invitation-overlay hidden" id="invitationOverlay">
+        
+        <!-- Celebration Confetti Particle Layer -->
+        <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+
+        <div class="content-scrollable" id="contentScrollable">
+          
+          <!-- Top Lord Ganesha Sacred Icon -->
+          <div class="ganesha-header-block animate-element" style="--delay: 0.05s;">
+            <img src="./assets/lord_ganesha_gold.png" alt="Lord Ganesha" class="ganesha-icon-img" width="100" height="125">
+          </div>
+
+          <!-- Hindi Invocation Calligraphy (Shree Ganeshay Namah) -->
+          <div class="invitation-header animate-element" style="--delay: 0.12s;">
+            <div class="hindi-calligraphy-display" id="displayBismillah">
+              <img src="./assets/shree_ganeshay_namah_gold.png" alt="श्री गणेशाय नमः" class="hindi-calligraphy-img" width="280" height="118">
+            </div>
+            <div class="header-divider">
+              <span class="line"></span>
+              <span class="diamond">✦</span>
+              <span class="line"></span>
+            </div>
+          </div>
+
+          <!-- Blessings of Ancestors Section -->
+          <div class="blessings-section animate-element" style="--delay: 0.18s;">
+            <p class="blessing-prefix">WITH THE BLESSINGS OF</p>
+            <div class="blessings-names-box">
+              <p class="blessing-names">Shri Rasiklal Doshi <span class="gold-amp">&amp;</span> Late Smt. Ranjanben Doshi</p>
+              <div class="blessing-sub-diamond">✦</div>
+              <p class="blessing-names">Late Shri Laxman Kashikedar <span class="gold-amp">&amp;</span> Late Smt. Janaki Kashikedar</p>
+            </div>
+          </div>
+
+          <div class="gold-separator-subtle animate-element" style="--delay: 0.22s;"></div>
+
+          <!-- Families & Sacred Journey Request -->
+          <p class="greeting-text animate-element" style="--delay: 0.26s;" id="displayGreeting">
+            We request your blessings and presence as our children embark on the sacred journey of Saptapadi
+          </p>
+
+          <!-- Couple Names & Parental Lineage Block -->
+          <div class="couple-names-block animate-element" style="--delay: 0.36s;">
+            <div class="person-block">
+              <h1 class="bride-name" id="displayBride">Nidhi</h1>
+              <p class="parent-line" id="displayBrideParents">(D/o Smt. Alka &amp; Shri Chetan Doshi)</p>
+            </div>
+            
+            <div class="ampersand-wrapper">
+              <span class="ampersand">&amp;</span>
+            </div>
+
+            <div class="person-block">
+              <h1 class="groom-name" id="displayGroom">Sainath</h1>
+              <p class="parent-line" id="displayGroomParents">(S/o Smt. Priyanka &amp; Shri Darshan Kashikedar)</p>
+            </div>
+          </div>
+
+          <div class="gold-separator animate-element" style="--delay: 0.45s;"></div>
+
+          <!-- Interactive Scratch-to-Reveal Date Card (27.01.2027) -->
+          <div class="scratch-card-wrapper animate-element" style="--delay: 0.55s;">
+            <div class="scratch-card-container" id="scratchContainer">
+              <!-- Underneath Date Card -->
+              <div class="date-time-card" id="dateTimeCard">
+                <div class="date-day" id="displayDay">WEDNESDAY</div>
+                <div class="date-main">
+                  <span class="date-month" id="displayMonth">JANUARY</span>
+                  <span class="date-num" id="displayDateNum">27</span>
+                  <span class="date-year" id="displayYear">2027</span>
+                </div>
+                <div class="date-save-the-date">SAVE THE DATE</div>
+              </div>
+              
+              <!-- Gold Scratch Foil Canvas -->
+              <canvas id="scratchCanvas" class="scratch-canvas"></canvas>
+              
+              <!-- Scratch Hint Badge -->
+              <div class="scratch-hint-badge" id="scratchHint">
+                <span class="sparkle-icon">✨</span>
+                <span>Scratch foil to reveal date</span>
+              </div>
+            </div>
+
+            <button id="quickRevealBtn" class="quick-reveal-btn">
+              <span>Quick Reveal Date ✨</span>
+            </button>
+          </div>
+
+          <!-- Live Countdown Row -->
+          <div class="countdown-section animate-element" style="--delay: 0.65s;">
+            <div class="countdown-title">COUNTDOWN TO THE CELEBRATION</div>
+            <div class="countdown-grid" id="countdownGrid">
+              <div class="countdown-pill">
+                <span class="countdown-num" id="cdDays">00</span>
+                <span class="countdown-unit">DAYS</span>
+              </div>
+              <div class="countdown-pill">
+                <span class="countdown-num" id="cdHours">00</span>
+                <span class="countdown-unit">HOURS</span>
+              </div>
+              <div class="countdown-pill">
+                <span class="countdown-num" id="cdMins">00</span>
+                <span class="countdown-unit">MINS</span>
+              </div>
+              <div class="countdown-pill">
+                <span class="countdown-num" id="cdSecs">00</span>
+                <span class="countdown-unit">SECS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dedicated Venue Section -->
+          <div class="venue-card-section animate-element" style="--delay: 0.75s;">
+            <div class="section-title">VENUE</div>
+            <div class="venue-card-inner">
+              <h3 class="venue-hall-name" id="displayVenue">Regal Banquet Hall</h3>
+              <p class="venue-club-name">Goregaon Sports Club, Mumbai</p>
+              <p class="venue-address-full" id="displayLocation">New Link Rd, near Toyota showroom, Mindspace, Malad West, Mumbai, Maharashtra 400064</p>
+            </div>
+          </div>
+
+          <!-- Quote Section (Moved between Venue and RSVP) -->
+          <div class="quote-section animate-element" style="--delay: 0.82s;">
+            <p class="story-quote">
+              “Two souls, one heart — a sacred journey of love, auspicious togetherness, and lifelong happiness.”
+            </p>
+          </div>
+
+          <!-- RSVP Section -->
+          <div class="rsvp-section animate-element" style="--delay: 0.90s;">
+            <div class="section-title">RSVP</div>
+            <div class="rsvp-card-inner">
+              <p class="rsvp-prompt">We look forward to celebrating with you!</p>
+              <div class="rsvp-phone-display">
+                <span class="rsvp-phone-label">For Blessings &amp; Confirmations</span>
+                <a href="tel:+919892137092" class="rsvp-phone-number">+91 98921 37092</a>
+              </div>
+              <div class="rsvp-buttons-row">
+                <a href="https://wa.me/919892137092?text=Namaste!%20We%20are%20delighted%20to%20RSVP%20for%20Nidhi%20%26%20Sainath's%20wedding%20on%20Wednesday,%2027th%20January%202027." target="_blank" rel="noopener noreferrer" class="rsvp-btn-whatsapp">
+                  <svg class="whatsapp-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                  </svg>
+                  <span>WhatsApp RSVP</span>
+                </a>
+                <a href="tel:+919892137092" class="rsvp-btn-call">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>Call Us</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons Grid -->
+          <div class="action-buttons-grid animate-element" style="--delay: 1.05s;">
+            <button class="primary-gold-btn" id="addToCalendarBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span>Add to Calendar</span>
+            </button>
+
+            <a href="https://maps.app.goo.gl/CgjJaLeYUEudBhcC7?g_st=aw" target="_blank" rel="noopener noreferrer" class="primary-gold-btn" id="openMapLink">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Venue Map</span>
+            </a>
+          </div>
+
+          <!-- Replay Footer -->
+          <div class="invitation-footer animate-element" style="--delay: 1.25s;">
+            <button id="replayBtn" class="text-link-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+              Replay Door Opening
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Door Selection Modal / Drawer -->
+  <div class="modal-backdrop hidden" id="doorModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2>Select Door Opening Video</h2>
+        <button class="close-modal-btn" id="closeDoorModal">&times;</button>
+      </div>
+
+      <!-- Custom Video File Upload Box -->
+      <div class="custom-video-upload-card" id="customVideoCard">
+        <input type="file" id="customVideoInput" accept="video/mp4,video/webm,video/quicktime,video/m4v" class="hidden">
+        <div class="upload-area" id="uploadArea">
+          <div class="upload-icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          </div>
+          <div class="upload-meta">
+            <span class="upload-title">Upload Your Custom Video</span>
+            <span class="upload-desc">Select any .mp4, .webm or .mov opening video from your device</span>
+          </div>
+          <button type="button" class="upload-browse-btn" id="browseVideoBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <span>Choose File</span>
+          </button>
+        </div>
+        <div id="customVideoStatus" class="custom-video-status hidden">
+          <div class="status-left">
+            <span class="status-pulse-dot"></span>
+            <span id="customVideoFileName" class="status-filename">custom_video.mp4</span>
+          </div>
+          <button type="button" id="removeCustomVideoBtn" class="status-remove-btn" title="Remove custom video and restore preset">Reset</button>
+        </div>
+      </div>
+
+      <div class="door-divider-or">
+        <span class="line"></span>
+        <span class="or-text">OR CHOOSE A PRESET ARCH</span>
+        <span class="line"></span>
+      </div>
+
+      <div class="door-options-grid">
+        <div class="door-option-card active" data-door="palace">
+          <div class="door-thumb">
+            <img src="./assets/doors/palace_poster.webp" alt="Royal Palace Doors">
+          </div>
+          <div class="door-info">
+            <span class="door-title">Royal Palace Doors</span>
+            <span class="door-desc">Majestic palace doors swing open inward</span>
+          </div>
+        </div>
+
+        <div class="door-option-card" data-door="1">
+          <div class="door-thumb">
+            <img src="/assets/doors/1.webp" alt="Door 1 - Emerald Arch">
+          </div>
+          <div class="door-info">
+            <span class="door-title">Emerald Arch</span>
+            <span class="door-desc">Botanical bougainvillea arch & classic sage tone</span>
+          </div>
+        </div>
+
+        <div class="door-option-card" data-door="2">
+          <div class="door-thumb">
+            <img src="/assets/doors/2.webp" alt="Door 2 - Royal Blue">
+          </div>
+          <div class="door-info">
+            <span class="door-title">Royal Mediterranean</span>
+            <span class="door-desc">Majestic royal blue door with floral surround</span>
+          </div>
+        </div>
+
+        <div class="door-option-card" data-door="3">
+          <div class="door-thumb">
+            <img src="/assets/doors/3.webp" alt="Door 3 - Moroccan Teal">
+          </div>
+          <div class="door-info">
+            <span class="door-title">Moroccan Emerald</span>
+            <span class="door-desc">Intricate arabesque arch with brass lantern</span>
+          </div>
+        </div>
+
+        <div class="door-option-card" data-door="4">
+          <div class="door-thumb">
+            <img src="/assets/doors/4.webp" alt="Door 4 - Gold Lattice">
+          </div>
+          <div class="door-info">
+            <span class="door-title">Gold Arabesque</span>
+            <span class="door-desc">Ornate geometric gold lattice & white arch</span>
+          </div>
+        </div>
+
+        <div class="door-option-card" data-door="6">
+          <div class="door-thumb">
+            <img src="/assets/doors/6.webp" alt="Door 6 - Blush Tree of Life">
+          </div>
+          <div class="door-info">
+            <span class="door-title">Blush Tree of Life</span>
+            <span class="door-desc">Sculptural carved tree motif & soft plaster</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Invitation Details Editor Drawer -->
+  <div class="modal-backdrop hidden" id="editorModal">
+    <div class="modal-card editor-card">
+      <div class="modal-header">
+        <h2>Customize Details</h2>
+        <button class="close-modal-btn" id="closeEditorModal">&times;</button>
+      </div>
+      <form id="editorForm" class="editor-form">
+        <div class="form-row dual">
+          <div class="form-group">
+            <label>Bride's Name</label>
+            <input type="text" id="inputBride" value="Nidhi">
+          </div>
+          <div class="form-group">
+            <label>Groom's Name</label>
+            <input type="text" id="inputGroom" value="Sainath">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Header Invocation / Symbol</label>
+          <input type="text" id="inputBismillah" value="॥ श्री गणेशाय नमः ॥">
+        </div>
+
+        <div class="form-group">
+          <label>Greeting Text</label>
+          <input type="text" id="inputGreeting" value="We request your blessings and presence as our children embark on the sacred journey of Saptapadi">
+        </div>
+
+        <div class="form-row tri">
+          <div class="form-group">
+            <label>Date</label>
+            <input type="text" id="inputDateNum" value="27">
+          </div>
+          <div class="form-group">
+            <label>Month</label>
+            <input type="text" id="inputMonth" value="JANUARY">
+          </div>
+          <div class="form-group">
+            <label>Year</label>
+            <input type="text" id="inputYear" value="2027">
+          </div>
+        </div>
+
+        <div class="form-row dual">
+          <div class="form-group">
+            <label>Day of Week</label>
+            <input type="text" id="inputDay" value="WEDNESDAY">
+          </div>
+          <div class="form-group">
+            <label>Numeric Date</label>
+            <input type="text" id="inputDateReveal" value="27.01.2027">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Venue Name</label>
+          <input type="text" id="inputVenue" value="Regal Banquet Hall">
+        </div>
+
+        <div class="form-group">
+          <label>Venue Address</label>
+          <input type="text" id="inputLocation" value="Goregaon Sports Club, Mumbai">
+        </div>
+
+        <div class="form-group">
+          <label>Door Opening Video (Custom File or URL)</label>
+          <div class="input-with-upload-group">
+            <input type="text" id="inputDoorVideoUrl" placeholder="e.g. /assets/doors/custom.mp4 or video URL" value="">
+            <button type="button" class="form-upload-trigger-btn" id="editorBrowseVideoBtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              <span>Upload</span>
+            </button>
+          </div>
+          <small class="form-field-hint">Upload an MP4 video or drop into <code>public/assets/doors/</code></small>
+        </div>
+
+        <div class="form-group">
+          <label>Background Music (YouTube Song / Video URL)</label>
+          <input type="text" id="inputYoutubeUrl" placeholder="e.g. https://www.youtube.com/watch?v=..." value="https://youtu.be/e1FFMfdh57w?si=Czb-xkfKOu-amjOf">
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="primary-gold-btn">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+  <!-- Venue Location Map Modal -->
+  <div class="modal-backdrop hidden" id="mapModal">
+    <div class="modal-card map-card">
+      <div class="modal-header">
+        <h2>Venue Location</h2>
+        <button class="close-modal-btn" id="closeMapModal">&times;</button>
+      </div>
+      <div class="map-body">
+        <div class="location-details">
+          <h3 id="mapVenueTitle">Regal Banquet Hall</h3>
+          <p id="mapVenueAddress">Goregaon Sports Club, Mumbai</p>
+        </div>
+        <div class="map-mockup">
+          <div class="map-grid-pattern"></div>
+          <div class="map-pin">
+            <div class="pin-pulse"></div>
+            <div class="pin-head">📍</div>
+          </div>
+          <span class="map-label">Regal Banquet Hall, Goregaon</span>
+        </div>
+        <a href="https://maps.app.goo.gl/CgjJaLeYUEudBhcC7?g_st=aw" target="_blank" rel="noopener noreferrer" class="primary-gold-btn full-width text-center">
+          Open in Google Maps ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
