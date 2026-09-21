@@ -558,16 +558,16 @@ html, body {
 
 /* --- Top Lord Ganesha Sacred Icon --- */
 .ganesha-header-block {
-  margin-bottom: 2px;
+  margin-bottom: -8px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .ganesha-icon-img {
-  width: 66px;
+  width: 48px;
   height: auto;
-  max-height: 84px;
+  max-height: 62px;
   object-fit: contain;
   filter: drop-shadow(0 0 16px rgba(255, 170, 40, 0.55));
   animation: subtleFloatGanesha 4s ease-in-out infinite alternate;
@@ -584,6 +584,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  margin-top: -6px;
 }
 
 .hindi-calligraphy-display {
@@ -666,10 +667,10 @@ html, body {
 
 .blessing-names {
   font-family: var(--font-body);
-  font-size: 0.98rem;
+  font-size: 1.08rem;
   color: var(--color-text-bright);
   letter-spacing: 0.5px;
-  line-height: 1.38;
+  line-height: 1.4;
 }
 
 .blessing-sub-diamond {
@@ -683,8 +684,8 @@ html, body {
   color: var(--color-gold);
   font-style: italic;
   font-family: var(--font-heading);
-  font-size: 0.82em;
-  margin: 0 0.35em;
+  font-size: 0.78em;
+  margin: 0 0.5em;
   display: inline-block;
 }
 
@@ -698,7 +699,7 @@ html, body {
 
 .greeting-text {
   font-family: var(--font-body);
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   letter-spacing: 1px;
   color: var(--color-gold-light);
   font-weight: 400;
@@ -723,7 +724,7 @@ html, body {
 
 .groom-name, .bride-name {
   font-family: var(--font-heading);
-  font-size: 2.75rem;
+  font-size: 3.1rem;
   font-weight: 400;
   line-height: 1.1;
   background: var(--color-gold-gradient);
@@ -735,7 +736,7 @@ html, body {
 
 .parent-line {
   font-family: var(--font-sans);
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   letter-spacing: 0.8px;
   color: var(--color-gold-light);
   opacity: 0.85;
@@ -1001,7 +1002,7 @@ html, body {
 
 .venue-hall-name {
   font-family: var(--font-heading);
-  font-size: 1.55rem;
+  font-size: 1.75rem;
   color: var(--color-gold-light);
   letter-spacing: 1.5px;
   line-height: 1.25;
@@ -1009,7 +1010,7 @@ html, body {
 
 .venue-club-name {
   font-family: var(--font-serif);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   color: var(--color-gold);
   letter-spacing: 1px;
   font-weight: 600;
@@ -1017,10 +1018,10 @@ html, body {
 
 .venue-address-full {
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--color-text-muted);
   line-height: 1.45;
-  max-width: 300px;
+  max-width: 310px;
   margin: 4px 0 2px;
 }
 
@@ -1034,7 +1035,7 @@ html, body {
 
 .story-quote {
   font-family: var(--font-body);
-  font-size: 1.02rem;
+  font-size: 1.08rem;
   font-style: italic;
   line-height: 1.55;
   color: var(--color-gold-light);
@@ -1064,7 +1065,7 @@ html, body {
 
 .rsvp-prompt {
   font-family: var(--font-body);
-  font-size: 1.05rem;
+  font-size: 1.18rem;
   font-style: italic;
   color: var(--color-gold-light);
 }
@@ -1078,7 +1079,7 @@ html, body {
 
 .rsvp-phone-label {
   font-family: var(--font-sans);
-  font-size: 0.74rem;
+  font-size: 0.78rem;
   letter-spacing: 1.2px;
   color: var(--color-text-muted);
   text-transform: uppercase;
@@ -1086,7 +1087,7 @@ html, body {
 
 .rsvp-phone-number {
   font-family: var(--font-heading);
-  font-size: 1.38rem;
+  font-size: 1.48rem;
   letter-spacing: 2px;
   color: var(--color-gold-light);
   text-decoration: none;
@@ -1114,10 +1115,10 @@ html, body {
   background: #25D366;
   color: #FFFFFF;
   font-family: var(--font-sans);
-  font-size: 0.84rem;
+  font-size: 0.92rem;
   font-weight: 600;
   letter-spacing: 0.5px;
-  padding: 11px 16px;
+  padding: 12px 18px;
   border-radius: 20px;
   text-decoration: none;
   box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
@@ -1138,10 +1139,10 @@ html, body {
   border: 1px solid var(--color-gold);
   color: var(--color-gold-light);
   font-family: var(--font-sans);
-  font-size: 0.84rem;
+  font-size: 0.92rem;
   font-weight: 600;
   letter-spacing: 0.5px;
-  padding: 11px 18px;
+  padding: 12px 20px;
   border-radius: 20px;
   text-decoration: none;
   transition: all 0.3s ease;
