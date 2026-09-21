@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite --host --port 3000",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
     "vite": "^6.4.3"
