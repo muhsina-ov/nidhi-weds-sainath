@@ -1223,8 +1223,23 @@ html, body {
   grid-template-columns: 1fr 1fr;
   gap: 12px;
   width: 100%;
-  max-width: 340px;
+  max-width: 350px;
   margin-bottom: 24px;
+}
+
+.action-buttons-grid .primary-gold-btn {
+  padding: 12px 14px;
+  font-size: 0.78rem;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+@media (max-width: 360px) {
+  .action-buttons-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }
 
 .primary-gold-btn {
